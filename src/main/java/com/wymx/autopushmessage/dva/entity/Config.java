@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Config {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer configId;
 
     /**

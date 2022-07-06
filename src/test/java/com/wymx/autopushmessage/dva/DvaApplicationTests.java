@@ -76,6 +76,8 @@ class DvaApplicationTests {
         Config result = configService.findByConfigName(config);
         System.out.println(result);
         Assertions.assertNotNull(result);
+        // 数据的删除，configName 具有唯一性
+        configService.deleteByConfigName(config);
     }
 
 

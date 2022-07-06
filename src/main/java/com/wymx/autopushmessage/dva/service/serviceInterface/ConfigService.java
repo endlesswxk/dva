@@ -20,4 +20,12 @@ public interface ConfigService {
      * @return Result
      */
     Result setConfigInfo(Config config);
+
+    /**
+     * 获取数据库配置值
+     *
+     * @param config
+     * @return Result
+     */
+    Integer deleteByConfigName(Config config);
 }

@@ -17,7 +17,7 @@ public class Message {
      * 消息ID
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long messageId;
 
     /**

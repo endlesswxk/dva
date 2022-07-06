@@ -22,7 +22,15 @@ public class ConfigServiceImpl implements ConfigService {
     @Override
     public Result setConfigInfo(Config config) {
         Config configResult = configRepository.save(config);
+        return getResult(configResult);
+    }
 
+    @Override
+    public Integer deleteByConfigName(Config config) {
+        return configRepository.deleteByConfigName(config.getConfigName());
+    }
+
+    private Result getResult(Config configResult) {
         Result result = new Result();
         if (configResult.getConfigId() != null) {
             result.setResultCode(ConstantResult.SUCCESS.getResultCode());
