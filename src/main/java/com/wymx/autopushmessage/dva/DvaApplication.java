@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @ComponentScan("com.*") //扫描component
-//@EnableScheduling //开启定时任务
+@EnableScheduling //开启定时任务
 public class DvaApplication {
 
     public static void main(String[] args) {
