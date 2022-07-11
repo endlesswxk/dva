@@ -1,5 +1,7 @@
 package com.wymx.autopushmessage.dva.controller;
 
+import com.wymx.autopushmessage.dva.entity.request.SaveOldDataRequest;
+import com.wymx.autopushmessage.dva.entity.response.SaveOldDataResponse;
 import com.wymx.autopushmessage.dva.service.serviceInterface.FileProcessService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.util.List;
 
@@ -24,10 +27,10 @@ public class DataProcessController {
     private FileProcessService fileProcessService;
 
 
-//    @RequestMapping(value = "/saveInfo", method = RequestMethod.POST)
-//    public Result saveInfo(HttpServletRequest request, @RequestBody SaveInfoRequest saveInfoRequest) {
-//        fileProcessService.getDictionaryFiles("");
-//    }
+    @RequestMapping(value = "/saveOldData", method = RequestMethod.POST)
+    public SaveOldDataResponse saveOldData(@RequestBody SaveOldDataRequest saveOldDataRequest) {
+        return fileProcessService.saveOldData(saveOldDataRequest);
+    }
 
     @RequestMapping(value = "/getPathFiles", method = RequestMethod.POST)
     public List<File> saveInfo(@RequestBody String path) {

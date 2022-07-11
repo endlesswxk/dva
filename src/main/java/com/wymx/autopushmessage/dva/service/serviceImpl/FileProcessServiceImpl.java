@@ -1,5 +1,7 @@
 package com.wymx.autopushmessage.dva.service.serviceImpl;
 
+import com.wymx.autopushmessage.dva.entity.request.SaveOldDataRequest;
+import com.wymx.autopushmessage.dva.entity.response.SaveOldDataResponse;
 import com.wymx.autopushmessage.dva.service.serviceInterface.FileProcessService;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,17 @@ public class FileProcessServiceImpl implements FileProcessService {
     public List<File> getDictionaryFiles(String path) {
         File dictionary = new File(path);
         return Arrays.asList(Objects.requireNonNull(dictionary.listFiles()));
+    }
+
+    @Override
+    public SaveOldDataResponse saveOldData(SaveOldDataRequest saveOldDataRequest) {
+
+
+
+
+
+
+
+        return null;
     }
 }
